@@ -1,4 +1,7 @@
 
+using Infrastructure;
+using Microsoft.EntityFrameworkCore;
+
 namespace ToDoList
 {
     public class Program
@@ -6,6 +9,9 @@ namespace ToDoList
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<ApllicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Add services to the container.
 
