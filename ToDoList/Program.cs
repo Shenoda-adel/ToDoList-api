@@ -8,7 +8,7 @@ namespace ToDoList
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            var builder = WebApplication.CreateBuilder(args); // this is the entry point of the application
 
             builder.Services.AddDbContext<ApllicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
