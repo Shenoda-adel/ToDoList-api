@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Business Logic\Business Logic.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\Tasks\" />
+  </ItemGroup>
+
 </Project>
