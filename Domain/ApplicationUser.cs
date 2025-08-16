@@ -10,6 +10,9 @@ namespace Domain
         public string? ProfilePictureUrl { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
+
         // Navigation properties
         public ICollection<ToDoTask>? Tasks { get; set; }
 
